@@ -7,16 +7,22 @@ import PageNotFound from "./components/pageNotFound";
 import Products from "./components/products";
 import Home from "./components/home";
 
+const routes = [
+	{ path: "/login", element: <Login /> },
+	{ path: "/products", element: <Products /> },
+	{ path: "/counter", element: <Counter /> },
+	{ path: "/", element: <Home /> },
+	{ path: "*", element: <PageNotFound /> }
+];
+
 function App() {
 	return (
 		<BrowserRouter>
 			<Nav />
 			<Routes>
-				<Route path="" element={<Home />} />,
-				<Route path="login" element={<Login />} />,
-				<Route path="products" element={<Products />} />,
-				<Route path="counter" element={<Counter />} />,
-				<Route path="*" element={<PageNotFound />} />
+				{routes.map((route, i) => {
+					<Route key={i} path={route.path} element={route.element} />;
+				})}
 			</Routes>
 		</BrowserRouter>
 	);
