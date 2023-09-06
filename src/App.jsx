@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 
 import { Nav } from "./components/nav";
 import Login from "./components/login";
@@ -16,14 +16,12 @@ const routes = [
 ];
 
 function App() {
+	const element = useRoutes(routes);
+
 	return (
 		<>
 			<Nav />
-			<Routes>
-				{routes.map((route, i) => {
-					<Route key={i} path={route.path} element={route.element} />;
-				})}
-			</Routes>
+			{element}
 		</>
 	);
 }
