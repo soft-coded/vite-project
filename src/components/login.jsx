@@ -12,7 +12,6 @@ function Login() {
 
 	function handleSubmit(event) {
 		event.preventDefault();
-		console.log(this.state.user);
 	}
 
 	return (
