@@ -12,10 +12,7 @@ function Login() {
 
 	function handleSubmit(event) {
 		event.preventDefault();
-		console.log("handleSubmit");
 		console.log(this.state.user);
-
-		// logic to authenticate user
 	}
 
 	return (
@@ -25,13 +22,13 @@ function Login() {
 		>
 			<h4>Login</h4>
 			<hr />
-			<form onSubmit={this.handleSubmit}>
+			<form onSubmit={handleSubmit}>
 				<div className="mb-3">
 					<label htmlFor="exampleInputEmail1" className="form-label">
 						Email address
 					</label>
 					<input
-						onChange={this.handleChange}
+						onChange={handleChange}
 						value={user.email}
 						name="email"
 						type="email"
@@ -45,8 +42,8 @@ function Login() {
 						Password
 					</label>
 					<input
-						onChange={this.handleChange}
-						value={this.state.user.password}
+						onChange={handleChange}
+						value={user.password}
 						name="password"
 						type="password"
 						className="form-control"
