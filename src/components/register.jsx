@@ -7,7 +7,7 @@ function Register() {
 	});
 
 	function handleChange(event) {
-		setUser({ email: event.target.value });
+		setUser({ email: event.target.value, password: "" });
 	}
 
 	function handleSubmit(event) {
