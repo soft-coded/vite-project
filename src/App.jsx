@@ -6,11 +6,13 @@ import Counter from "./components/counter";
 import PageNotFound from "./components/pageNotFound";
 import Products from "./components/products";
 import Home from "./components/home";
+import Register from "./components/register";
 
 const routes = [
 	{ path: "/login", element: <Login /> },
 	{ path: "/products", element: <Products /> },
 	{ path: "/counter", element: <Counter /> },
+	{ path: "/register", element: <Register /> },
 	{ path: "/", element: <Home /> },
 	{ path: "*", element: <PageNotFound /> }
 ];
